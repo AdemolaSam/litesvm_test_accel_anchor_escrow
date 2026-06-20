@@ -28,7 +28,7 @@ mod tests {
         let program_id = anchor_escrow_q2_2026::id();
         let payer = Keypair::new();
         let mut svm = LiteSVM::new();
-        let bytes = include_bytes!("../../../target/deploy/anchor_escrow_q2_2026.so");
+        let bytes = include_bytes!("../../../target/deploy/anchor_escrow_q2_2026-keypair.so");
         svm.add_program(program_id, bytes).unwrap();
         svm.airdrop(&payer.pubkey(), 1_000_000_000).unwrap();
         
